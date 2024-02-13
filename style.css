@@ -63,13 +63,36 @@ body{
     display: flex;
     align-items: center;
     padding: 15px 30px;
-    font-size: 16px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
     gap: 10px;
     border: none;
     border-radius: 20px;
     background: linear-gradient(#27519D, #5E58A2);
+    transition: all 0.5s;
+}
+
+.contact-left button span{
     cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.contact-left button span:after{
+    content:url('assets/arrow_icon.png');
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -40px;
+    transition: 0.5s;
+}
+.contact-left button:hover span{
+    padding-right: 29px;
+}
+.contact-left button:hover span:after{
+    opacity: 1;
+    right: 0;
 }
 
 .contact-left button img{
@@ -81,6 +104,13 @@ body{
 .contact-right img{
     height: 400px;
     transform: rotateY(190deg);
+    transition: transform 1s;
+}
+
+.contact-right img:hover{
+    transform: rotateY(10deg);
+    box-shadow: 10px 2px 10px 5px rgb(79, 76, 76);
+    border-radius: 50px;
 }
 
 @media (max-width: 880px)
